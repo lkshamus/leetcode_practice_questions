@@ -45,3 +45,30 @@ var uniqueOccurrences = function(arr) {
 }
 
 uniqueOccurrences([1,2,2,1,1,3,2])
+
+
+function anagram(x, y) {
+  first = x.split("").sort()
+  second = y.split("").sort()
+
+  if (JSON.stringify(first) === JSON.stringify(second)) {
+    return true
+  } else {
+    return false
+  }
+}
+
+anagram("listen", "silent")
+
+function palindrome(x) {
+  reverse = x.toLowerCase().split("").reverse().join("")
+  if (reverse === x.toLowerCase()) {
+    return true
+  } else {
+    return false
+  }
+}
+
+palindrome("rAceCar")
+
+
